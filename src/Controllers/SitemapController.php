@@ -20,18 +20,12 @@ class SitemapController extends \Illuminate\Routing\Controller
                 $arItems[] = ["slug"=>$dataModel->slug,
                 "updated_at"=>$dataModel->updated_at ];
             }
-            //$item = $model.'::'.get();
         }
-        //dump($arItems);
-        //$posts = Film::get();
-        //dd($posts);
         View::share([
             'items' => $arItems,
         ]);
-
-        // return view('admin.pages.index');
-        // return response()->view('DsimakovSitemap::index')->header('Content-type', 'text/xml');
-        //return view('DsimakovSitemap::index');
-        return view('DsimakovSitemap::index');
+        return response()
+            ->view('DsimakovSitemap::index', $arItems, 200)
+            ->header('Content-Type', 'xml');
     }
 }
