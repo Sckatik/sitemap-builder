@@ -16,7 +16,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
         $this->loadViewsFrom(__DIR__.'/../views/', 'DsimakovSitemap');
         $this->publishes([
-            __DIR__.'/../config/main.php' => config_path('main.php'),
+            __DIR__.'/../config/sitemapConfig.php' => config_path('sitemapConfig.php'),
         ]);
     }
 }

@@ -8,7 +8,7 @@ class GenerateSitemap implements GenerateSitemapInterface
 {
     public function generate(): array
     {
-        $arModels = config('main.models');
+        $arModels = config('sitemapConfig.models');
         $arItems = [];
         foreach ($arModels as $model) {
             $allDataModel = $model::all();
