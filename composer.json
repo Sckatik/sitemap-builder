@@ -1,27 +1,26 @@
 {
-  "name": "dsimakov/sitemap-builder",
-  "description": "Generate sitemap",
-  "type": "library",
-  "authors": [
-    {
-      "name": "Dmitriy Simakov",
-      "email": "sckat@yandex.ru"
+    "name": "dsimakov/sitemap-builder",
+    "description": "Generate sitemap",
+    "type": "library",
+    "license": "MIT",
+    "authors": [{
+        "name": "Dmitriy Simakov",
+        "email": "sckat@yandex.ru"
+    }],
+    "require": {
+        "illuminate/support": "^7.23",
+        "illuminate/routing": "^7.24"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dsimakov\\Sitemap\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "\\Dsimakov\\Sitemap\\ServiceProvider"
+            ]
+        }
     }
-  ],
-  "require": {
-    "illuminate/support": "^7.23",
-    "illuminate/routing": "^7.24"
-  },
-  "autoload": {
-    "psr-4": {
-      "Dsimakov\\Sitemap\\": "src/"
-    }
-  },
-  "extra": {
-    "laravel": {
-      "providers": [
-        "\\Dsimakov\\Sitemap\\ServiceProvider"
-      ]
-    }
-  }
 }
